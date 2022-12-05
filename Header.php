@@ -5,7 +5,7 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>MDR</title>
+        <title>GTF</title>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="bootstrap-5.2.2-dist/css/bootstrap.min.css">
 
@@ -15,7 +15,7 @@
             <ul>
             <?php
                     if(isset($_SESSION["useruid"])){
-                        echo "<li><a href='profile.php'>Profile page</a></li>";
+                        echo "<li><a href='profile.php'>Profile</a></li>";
                         echo "<li><a href='includes/logout.inc.php'>Log Out</a></li>";
                     }
                     else{

@@ -4,12 +4,11 @@
 <div class="homepage">
 <?php
                     if(isset($_SESSION["useruid"])){
-                        echo "<li><a href='profile.php'>Profile page</a></li>";
                         echo "<p>Hello there, ".$_SESSION["useruid"]."</p>";
+                        include_once 'usersData.php';
                     }
                     else{
-                        echo "<li><a href='signup.php'>Sign up</a></li>";
-                        echo "<li><a href='login.php'>Log In</a></li>";                       
+                    
                     }
                 ?>
     <h1 class="title1">welcome to GetFit</h1>

@@ -15,6 +15,11 @@
         <input type="text" name="uid" placeholder="Username..."><br>
         <input type="password" name="pwd" placeholder="Password..."><br>
         <input type="password" name="pwdrepeat" placeholder="Repeat Password..."><br>
+        <input type="radio" name="userType" value="Trainee"
+        class="custum-radio" required>&nbsp; Trainee |
+        <input type="radio" name="userType" value="Coach"
+        class="custum-radio" required>&nbsp; Coach
+        <br>
         <button type="submit" name="submit">Sign Up</button>
 
     </form>
