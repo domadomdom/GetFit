@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@zoomus/websdk": "^2.9.5",
     "prettier": "^2.7.1"
   }
 }
