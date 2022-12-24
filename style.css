@@ -66,6 +66,7 @@ p {
   height: auto;
   background-color: #3cbc8d;
   border-radius: 10px;
+  margin: 40px;
 }
 .container3 {
   position: relative;
@@ -74,6 +75,8 @@ p {
   height: auto;
   background-color: whitesmoke;
   border-radius: 10px;
+  padding: 10px;
+  margin: 40px;
 }
 .container4 {
   position: relative;
@@ -176,11 +179,32 @@ li a:hover:not(.active) {
   background: whitesmoke;
   text-align: center;
 }
+.set_goal {
+  margin: 0;
+  padding-left: 10%;
+  background: whitesmoke;
+  text-align: left;
+}
+.diet-choose {
+  margin: 0;
+  padding-left: 10%;
+  background: whitesmoke;
+  text-align: left;
+}
 .container {
   text-align: center;
   height: auto;
   width: 200px;
   background: white;
+  border-radius: 10px;
+}
+.container5 {
+  position: relative;
+  text-align: left;
+
+  color: black;
+  height: auto;
+  background-color: whitesmoke;
   border-radius: 10px;
 }
 .body {

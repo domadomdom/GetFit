@@ -10,6 +10,7 @@ function emptyInputSignup($name, $email, $username, $pwd, $pwdRepeat, $userType)
     }
     return $result;
 }
+
 function invalidUid($username)
 {
     if (!preg_match("/^[a-zA-Z0-9]*$/", $username)) {
@@ -132,6 +133,79 @@ function createData($conn, $age, $weight, $height, $gender)
     header("location: ../index.php?error=none");
     exit();
 }
+
+function emptyInputGoal($goal, $date)
+{
+    if (empty($goal) || empty($date)) {
+        $result = true;
+    } else {
+        $result = false;
+    }
+    return $result;
+}
+
+function createGoal($conn, $goal, $date)
+{
+    $sql = "INSERT INTO usersGoal(userGoal, userDate) VALUES(?, ?); ";
+    $stmt = mysqli_stmt_init($conn);
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        header("location: ../index.php?error=stmtfailed");
+        exit();
+    }
+    mysqli_stmt_bind_param($stmt, "ss", $goal, $date);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+    header("location: ../index.php?error=none");
+    exit();
+}
+function emptyInputMeal($meal)
+{
+    if (empty($meal)) {
+        $result = true;
+    } else {
+        $result = false;
+    }
+    return $result;
+}
+
+function createMeal($conn, $meal)
+{
+    $sql = "INSERT INTO usersMeal(userMeal) VALUES(?); ";
+    $stmt = mysqli_stmt_init($conn);
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        header("location: ../index.php?error=stmtfailed");
+        exit();
+    }
+    mysqli_stmt_bind_param($stmt, "s", $meal);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+    header("location: ../index.php?error=none");
+    exit();
+}
+function emptyInputDiet($diet)
+{
+    if (empty($diet)) {
+        $result = true;
+    } else {
+        $result = false;
+    }
+    return $result;
+}
+
+function createDiet($conn, $diet)
+{
+    $sql = "INSERT INTO usersDiet(userDiet) VALUES(?); ";
+    $stmt = mysqli_stmt_init($conn);
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        header("location: ../index.php?error=stmtfailed");
+        exit();
+    }
+    mysqli_stmt_bind_param($stmt, "s", $diet);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+    header("location: ../index.php?error=none");
+    exit();
+}
 function invalidAge($age)
 {
     if (!preg_match("/^[a-zA-Z0-9]*$/", $age)) {
@@ -153,6 +227,15 @@ function invalidWeight($weight)
 function invalidHeight($height)
 {
     if (!preg_match("/^[a-zA-Z0-9]*$/", $height)) {
+        $result = true;
+    } else {
+        $result = false;
+    }
+    return $result;
+}
+function invalidGoal($goal)
+{
+    if (!preg_match("/^[a-zA-Z0-9]*$/", $goal)) {
         $result = true;
     } else {
         $result = false;
